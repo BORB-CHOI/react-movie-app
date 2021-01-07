@@ -1,3 +1,3 @@
-#React Movie App
+# React Movie App
 
 Nomad Coders React JS Fundamentals Course

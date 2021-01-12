@@ -1,41 +1,19 @@
 import React from "react";
 
 class App extends React.Component {
-  constructor(lalla) {
-    super(lalla);
-    console.log("Constructor called");
-  }
   state = {
-    count: 0,
+    isLoading: true,
+    movies: [],
   };
-  add = () => {
-    this.setState((current) => ({ count: current.count + 1 }));
-  };
-  minus = () => {
-    this.setState({ count: this.state.count - 1 });
-  };
-
   componentDidMount() {
-    console.log("first componenet rendered");
+    setTimeout(() => {
+      this.setState({ isLoading: false, book: true });
+      //  state 값은 언제든지 자유롭게 추가 가능
+    }, 6000);
   }
-
-  componentDidUpdate() {
-    console.log("I'm just updated!");
-  }
-
-  componentWillUnmount() {
-    console.log("Good bye, Cruel world");
-  }
-
   render() {
-    console.log("I'm rendering");
-    return (
-      <div>
-        <h1>The number is: {this.state.count}</h1>
-        <button onClick={this.add}>Add</button>
-        <button onClick={this.minus}>Minus</button>
-      </div>
-    );
+    const { isLoading } = this.state;
+    return <div>{isLoading ? "Loading..." : "We are ready"}</div>;
   }
 }
 

@@ -1,19 +1,51 @@
 import React from "react";
+import axios from "axios";
+import Movie from "./Movies";
 
 class App extends React.Component {
   state = {
     isLoading: true,
     movies: [],
   };
+
+  getMovies = async () => {
+    const {
+      data: {
+        data: { movies },
+      },
+    } = await axios.get(
+      "https://yts.mx/api/v2/list_movies.json?sort_by=rating"
+    );
+    this.setState({ movies, isLoading: false });
+  };
+
   componentDidMount() {
-    setTimeout(() => {
-      this.setState({ isLoading: false, book: true });
-      //  state 값은 언제든지 자유롭게 추가 가능
-    }, 6000);
+    this.getMovies();
   }
   render() {
-    const { isLoading } = this.state;
-    return <div>{isLoading ? "Loading..." : "We are ready"}</div>;
+    const { isLoading, movies } = this.state;
+    return (
+      <section className="container">
+        {isLoading ? (
+          <div className="loader">
+            <span className="loader__text">Loading...</span>
+          </div>
+        ) : (
+          <div className="movies">
+            {movies.map((movies) => (
+              <Movie
+                key={movies.id}
+                year={movies.year}
+                title={movies.title}
+                summary={movies.summary}
+                poster={movies.medium_cover_image}
+                genres={movies.genres}
+              />
+            ))}
+          </div>
+        )}
+      </section>
+    );
   }
 }
 

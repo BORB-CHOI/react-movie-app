@@ -1,0 +1,127 @@
+.movies {
+  display: grid;
+}
+
+.movie {
+  display: grid;
+  transition: 0.18s ease all;
+  box-shadow: 0px 1px 2px 0px rgba(60, 64, 67, 0.2),
+    0px 2px 6px 2px rgba(60, 64, 67, 0.27);
+  background-color: rgba(255, 255, 255, 0.699);
+}
+
+.movie:hover {
+  box-shadow: 0px 3px 5px 0px rgba(60, 64, 67, 0.3),
+    0px 5px 7px 5px rgba(60, 64, 67, 0.15);
+  transform: translateY(-3px);
+}
+
+.movie__data {
+  margin: 10px;
+  color: rgba(0, 0, 0, 0.6);
+  overflow-wrap: anywhere;
+}
+
+.movie__title {
+  padding-bottom: 7px;
+  font-weight: 600;
+  font-size: 30px;
+  color: rgb(15, 15, 15);
+}
+
+.movie__year {
+  padding-bottom: 5px;
+  font-size: 16px;
+}
+
+.movie__genres {
+  padding-bottom: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.movie__genres li:nth-child(n + 2) {
+  padding-left: 2px;
+}
+
+.movie__summary {
+  overflow-wrap: anywhere;
+}
+
+.movie__summary .summar_more {
+  display: inline-block;
+  font-weight: bold;
+}
+
+/* Extra large screens, TV */
+
+@media screen and (min-width: 1201px) {
+  .movies {
+    margin: 70px 0 70px 0;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    gap: 30px;
+  }
+  .movie {
+    grid-template-columns: min-content 1fr;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .movies {
+    margin: 70px 0 70px 0;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    gap: 30px;
+  }
+  .movie {
+    grid-template-columns: min-content 1fr;
+  }
+}
+
+/* Small screen, laptops */
+
+@media screen and (max-width: 1024px) {
+  .movies {
+    margin: 70px 0 70px 0;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    gap: 30px;
+  }
+  .movie {
+    grid-template-columns: min-content 1fr;
+  }
+}
+
+/* iPads, Tablets */
+
+@media screen and (max-width: 768px) {
+  .movies {
+    margin: 0;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .movie {
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content 1fr;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+/* Mobile devices */
+
+@media screen and (max-width: 480px) {
+  .movies {
+    margin: 0;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .movie {
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content 1fr;
+  }
+  img {
+    width: 100%;
+  }
+}

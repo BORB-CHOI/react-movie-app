@@ -1,0 +1,13 @@
+html {
+  background-color: rgba(215, 221, 221, 0.5);
+}
+.container-about {
+  margin-top: 5vh;
+  height: 95vh;
+}
+.about {
+  height: 100%;
+  display: grid;
+  place-content: center center;
+  background-color: skyblue;
+}

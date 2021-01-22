@@ -1,38 +1,32 @@
-/* Extra large screens, TV */
+.container-detail {
+  margin-top: 5.4vh;
+  padding: 50px 0 50px 0;
+  height: 94.6vh;
+}
 
-html {
+.detail {
   width: 100%;
   height: 100%;
-  background-color: rgba(215, 221, 221, 0.5);
-}
-
-.loader {
-  height: 94.6vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 600;
-  font-style: italic;
-  font-size: 40px;
-}
-
-.container {
-  padding-top: 5.4vh;
-  margin: 0 auto;
-  font-family: "Fraunces", serif;
+  display: grid;
+  place-content: center center;
+  box-shadow: 0px 1px 2px 0px rgba(60, 64, 67, 0.2),
+    0px 2px 6px 2px rgba(60, 64, 67, 0.27);
+  background-color: rgba(255, 255, 255, 0.699);
+  font-weight: bold;
+  font-size: 36px;
 }
 
 /* Extra large screens, TV */
 
 @media screen and (min-width: 1201px) {
-  .container {
+  .container-detail {
     width: 80%;
   }
 }
 /* Desktops, large screens */
 
 @media screen and (max-width: 1200px) {
-  .container {
+  .container-detail {
     width: 80%;
   }
 }
@@ -40,7 +34,7 @@ html {
 /* Small screen, laptops */
 
 @media screen and (max-width: 1024px) {
-  .container {
+  .container-detail {
     width: 80%;
   }
 }
@@ -48,7 +42,7 @@ html {
 /* iPads, Tablets */
 
 @media screen and (max-width: 768px) {
-  .container {
+  .container-detail {
     width: 100%;
   }
 }
@@ -56,7 +50,7 @@ html {
 /* Mobile devices */
 
 @media screen and (max-width: 480px) {
-  .container {
+  .container-detail {
     width: 100%;
   }
 }

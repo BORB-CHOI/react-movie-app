@@ -1,13 +1,63 @@
 html {
   background-color: rgba(215, 221, 221, 0.5);
 }
+
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .container-about {
-  margin-top: 5vh;
-  height: 95vh;
+  margin-top: 5.4vh;
+  padding: 50px 0 50px 0;
+  height: 94.6vh;
 }
 .about {
+  width: 100%;
   height: 100%;
   display: grid;
   place-content: center center;
-  background-color: skyblue;
+  box-shadow: 0px 1px 2px 0px rgba(60, 64, 67, 0.2),
+    0px 2px 6px 2px rgba(60, 64, 67, 0.27);
+  background-color: rgba(255, 255, 255, 0.699);
+}
+
+/* Extra large screens, TV */
+
+@media screen and (min-width: 1201px) {
+  .container-about {
+    width: 80%;
+  }
+}
+/* Desktops, large screens */
+
+@media screen and (max-width: 1200px) {
+  .container-about {
+    width: 80%;
+  }
+}
+
+/* Small screen, laptops */
+
+@media screen and (max-width: 1024px) {
+  .container-about {
+    width: 80%;
+  }
+}
+
+/* iPads, Tablets */
+
+@media screen and (max-width: 768px) {
+  .container-about {
+    width: 100%;
+  }
+}
+
+/* Mobile devices */
+
+@media screen and (max-width: 480px) {
+  .container-about {
+    width: 100%;
+  }
 }

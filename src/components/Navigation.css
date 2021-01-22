@@ -1,7 +1,58 @@
-.Navigator {
+a {
+  width: 5vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 1px 2px 0px rgba(60, 64, 67, 0.2);
+
+  background-color: rgba(228, 227, 227, 0.507);
+  text-decoration: none;
+  color: black;
+}
+
+a:active {
+  background-color: rgba(228, 227, 227, 0.8);
+}
+
+.nav {
   top: 0;
   width: 100%;
-  height: 5vh;
+  height: 5.4vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
-  background-color: red;
+  background-color: white;
+  z-index: 1;
+  font-weight: bold;
+}
+
+.nav__about {
+  margin-left: 10vw;
+}
+
+/* Extra large screens, TV */
+
+@media screen and (min-width: 1201px) {
+}
+
+/* Desktops, large screens */
+
+@media screen and (max-width: 1200px) {
+}
+
+/* Small screen, laptops */
+
+@media screen and (max-width: 1024px) {
+}
+
+/* iPads, Tablets */
+
+@media screen and (max-width: 768px) {
+}
+
+/* Mobile devices */
+
+@media screen and (max-width: 480px) {
 }

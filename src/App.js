@@ -12,7 +12,7 @@ const App = () => {
       <Navigation />
       <Route path="/" exact={true} component={Home} />
       <Route path="/about" component={Potato} />
-      <Route path="/movie-detail" component={Detail} />
+      <Route path="/movie/:id" component={Detail} />
       {/* Route 컴포넌트는 props를 줌 */}
     </HashRouter>
   );
